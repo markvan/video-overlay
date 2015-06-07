@@ -37,3 +37,47 @@
     position: absolute;
     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
 }
+
+.video-popup-close {
+
+    float: right;
+    background: transparent url("close-icon.svg") no-repeat top center;
+    -webkit-background-size: 22px;
+    -moz-background-size: 22px;
+    background-size: 22px;
+    cursor: pointer;
+    height: 44px;
+    opacity: .4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    right: 0;
+    top: -32px;
+    width: 44px;
+    z-index: 2;
+}
+
+#containingBlock {
+    width: 50%;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+* html .videoWrapper {
+    margin-bottom: 45px;
+    margin-bot\tom: 0;
+}
+
+.videoWrapper div,
+.videoWrapper embed,
+.videoWrapper object {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
