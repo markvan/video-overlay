@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>simple jqModal example</title>
+
+    <!-- example page styling -->
+    <style>
+        div.middle {
+            width: 600px;
+            margin: 2em auto;
+        }
+    </style>
+
+    <!-- jqModal Dependencies -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="jqModal.js"></script>
+
+    <!--  jqModal Styling -->
+    <link type="text/css" rel="stylesheet" media="all" href="jqModal.css"/>
+
+    <!-- example page Styling  -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+          type="text/css" rel="stylesheet"/>
+
+</head>
+<body>
+
+<!-- TRIGGER ELEMENTS -->
+
+<div class="middle">
+    1. <em>Defaults</em> -- <a href="#" class="jqModal">show dialog</a> <br/>
+     <br/>
+    HERE
+    Out-of-box behavior. The window and its
+    content is taken "inline" from the element with an ID of 'dialog'. The dialog is "triggered" (shown) when element(s)
+    with class <i>jqModal</i> are clicked. No parameters are passed, no fancy window decorations used.
+</div>
+
+
+<!-- MODAL MARKUP (styled via jqModal.css) -->
+
+<div class="jqmWindow" id="dialog">
+    <a href="#" id="button_1" class="jqmClose">Close</a>
+    <br/>
+    <!--<embed id="playerID"
+           style="position: absolute; top: 0; left: 0;" width="100%" height="600px" frameborder="0"
+           webkitallowfullscreen mozallowfullscreen allowfullscreen allowfullscreen="true"
+           allowscriptaccess="always" quality="high" bgcolor="#000000" name="my-video" style=""
+           src="http://www.youtube.com/v/your_video_id?enablejsapi=1&version=3&playerapiid=ytplayer"
+           type="application/x-shockwave-flash">-->
+        <embed id="playerID" src="//www.youtube.com/embed/JMAm3QkhxaU?title=0&amp;enablejsapi=1&amp;byline=0&amp;portrait=0&amp;"
+                width="100%" height="100%" frameborder="0"
+                webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""/>
+</div>
+</div>
+
+
+<!-- MODAL SCRIPT -->
+
+<script type="text/javascript">
+    $().ready(function () {
+        /* Example #1 */
+        $('#dialog').jqm();
+
+    });
+</script>
+
+<style>
+    .glyphicon-spin {
+        -webkit-animation: spin 1000ms infinite linear;
+        animation: spin 1000ms infinite linear;
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+        }
+    }
+</style>
+
+</body>
+</html>
