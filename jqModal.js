@@ -10,7 +10,6 @@
  * Requires: jQuery 1.2.3+
  */
 
-$(document).on("click","#button_1",function() { alert( $('#playerID') ); });
 
 
 (function($) {
