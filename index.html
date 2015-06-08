@@ -10,52 +10,39 @@
         }
     </style>
 
-    <!-- jqModal Dependencies -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="jqModal.js"></script>
     <script type="text/javascript" src="google_video.js"></script>
 
 
-    <!--  jqModal Styling -->
     <link type="text/css" rel="stylesheet" media="all" href="jqModal.css"/>
 
-    <!-- example page Styling  -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
           type="text/css" rel="stylesheet"/>
 
 </head>
 <body>
 
-<!-- TRIGGER ELEMENTS -->
-
-<div class="middle">
-    1. <em>Defaults</em> -- <a href="#" class="jqModal">show dialog</a> <br/>
-    <br/>
-    HERE
-    Out-of-box behavior. The window and its
-    content is taken "inline" from the element with an ID of 'dialog'. The dialog is "triggered" (shown) when element(s)
-    with class <i>jqModal</i> are clicked. No parameters are passed, no fancy window decorations used.
-</div>
-
-
-<!-- MODAL MARKUP (styled via jqModal.css) -->
-
-<div class="jqmWindow" id="dialog">
-    <a href="#" id="close_button" class="jqmClose">
-        <div id="videoPopupClose" class="video-popup-close"></div>
-    </a>
-
-    <br/>
-
-    <div id="containingBlock">
-        <div class="videoWrapper">
-            <div>
-                <div id="player"></div>
-            </div>
-        </div>
+    <div class="middle">
+        <a href="#" class="jqModal">show dialog</a> <br/>
     </div>
-</div>
-</div>
+
+
+    <!-- MODAL MARKUP (styled via jqModal.css) -->
+
+    <div class="jqmWindow" id="dialog">
+        <a href="#" id="close_button" class="jqmClose">
+            <div id="videoPopupClose" class="video-popup-close"></div>
+        </a>
+
+        <br/>
+
+            <div class="embed-responsive embed-responsive-16by9">
+                <div>
+                    <div id="player"></div>
+                </div>
+            </div>
+    </div>
 
 
 <!-- MODAL SCRIPT -->
