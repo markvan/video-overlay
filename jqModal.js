@@ -81,7 +81,8 @@
      */
     $.fn.jqmHide=function(trigger){
         return this.each(function(){ this._jqmShown&&hide($(this), trigger);
-            $('#playerID').get(0).stopVideo();
+            //$('#playerID').get(0).stopVideo();
+            player.stopVideo();
         });
     };
 
