@@ -16,16 +16,16 @@
 
     width: 96%;
 
-    background-color: #EEE;
+    background-color: black;
     color: #333;
     border: 1px solid black;
-    padding: 12px;
+    padding: 0px;
 }
 
-.jqmOverlay { background-color: #000; }
+.jqmOverlay { background-color: #1ab1bf; }
 
 /* Background iframe styling for IE6. Prevents ActiveX bleed-through (<select> form elements, etc.) */
-* iframe.jqm {position:absolute;top:0;left:0;z-index:-1;
+* iframe.jqm {position:absolute;top:0;left:0;z-index:1;
     width: expression(this.parentNode.offsetWidth+'px');
     height: expression(this.parentNode.offsetHeight+'px');
 }
@@ -33,26 +33,25 @@
 /* Fixed posistioning emulation for IE6
      Star selector used to hide definition from browsers other than IE6
      For valid CSS, use a conditional include instead */
+
 * html .jqmWindow {
     position: absolute;
     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
 }
 
-.video-popup-close {
+#close_button {
 
-    float: right;
-    background: transparent url("close-icon.svg") no-repeat top center;
-    -webkit-background-size: 22px;
-    -moz-background-size: 22px;
-    background-size: 22px;
-    cursor: pointer;
-    height: 44px;
-    opacity: .4;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-    filter: alpha(opacity=40);
-    right: 0;
-    top: -32px;
-    width: 44px;
-    z-index: 2;
+    position: absolute;
+    right: 3px;
+    margin-bottom: 2px;
+
+    background-color: black;
+    color: #d8d8d8;
 }
+
+body {
+    background-image: url("background.png");
+}
+
+
 

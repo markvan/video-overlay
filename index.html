@@ -24,18 +24,18 @@
 <body>
 
     <div class="middle">
-        <a href="#" class="jqModal">show dialog</a> <br/>
+        <button type="button" href="#" class="jqModal btn btn-danger ">Watch the responsive vid</button>
     </div>
 
 
     <!-- MODAL MARKUP (styled via jqModal.css) -->
 
     <div class="jqmWindow" id="dialog">
-        <a href="#" id="close_button" class="jqmClose">
-            <div id="videoPopupClose" class="video-popup-close"></div>
-        </a>
+            <a href="#" id="close_button" class="jqmClose">
+                close
+            </a>
 
-        <br/>
+            <br/>
 
             <div class="embed-responsive embed-responsive-16by9">
                 <div>
@@ -55,34 +55,7 @@
     });
 </script>
 
-<style>
-    .glyphicon-spin {
-        -webkit-animation: spin 1000ms infinite linear;
-        animation: spin 1000ms infinite linear;
-    }
 
-    @-webkit-keyframes spin {
-        0% {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-        }
-        100% {
-            -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-        }
-    }
-
-    @keyframes spin {
-        0% {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-        }
-        100% {
-            -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-        }
-    }
-</style>
 
 </body>
 </html>
